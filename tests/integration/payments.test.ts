@@ -139,6 +139,7 @@ describe("POST /payments/process", () => {
       const enrollment = await createEnrollmentWithAddress(user);
       const ticketType = await createTicketType();
       const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.RESERVED);
+      ticket;
 
       const body = { cardData: generateCreditCardData() };
 
